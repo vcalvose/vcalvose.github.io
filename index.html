@@ -2,77 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vcalvose | Developer</title>
     <style>
-        :root {
-            --bg: #0d1117;
-            --code-bg: #161b22;
-            --text: #c9d1d9;
-            --keyword: #ff7b72;
-            --string: #a5d6ff;
-            --function: #d2a8ff;
-            --accent: #58a6ff;
+        body {
+            background-color: #000;
+            color: #33ff33;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            margin: 0;
+            text-shadow: 0 0 5px #33ff33;
         }
-        body { 
-            background-color: var(--bg); 
-            color: var(--text); 
-            font-family: 'Courier New', Courier, monospace; 
-            margin: 0; 
-            padding: 20px; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        .terminal { max-width: 800px; margin: 0 auto; }
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            white-space: pre;
+            color: #33ff33;
         }
-        .terminal {
-            background-color: var(--code-bg);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #30363d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            max-width: 600px;
-            width: 100%;
-        }
-        .blink { animation: blink 1s infinite; font-weight: bold; color: var(--accent); }
-        @keyframes blink { 50% { opacity: 0; } }
+        .log { margin-bottom: 5px; }
+        .success { color: #33ff33; }
+        .highlight { color: #ffffff; }
+        .blink { animation: blink-animation 1s steps(5, start) infinite; }
+        @keyframes blink-animation { to { visibility: hidden; } }
         
-        .code-block { margin-top: 20px; }
-        .keyword { color: var(--keyword); }
-        .string { color: var(--string); }
-        .func { color: var(--function); }
-        
-        .btn { 
-            display: inline-block; 
-            margin-top: 20px; 
-            padding: 10px 20px; 
-            background: var(--accent); 
-            color: white; 
+        .content-block { border: 1px solid #33ff33; padding: 15px; margin-top: 20px; }
+        a { 
+            color: #000; 
+            background: #33ff33; 
             text-decoration: none; 
-            border-radius: 4px;
+            padding: 5px 10px; 
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="terminal">
-        <div><span class="keyword">const</span> <span class="func">developer</span> = {</div>
-        <div style="padding-left: 20px;">
-            name: <span class="string">"Vcalvose"</span>,<br>
-            role: <span class="string">"Mobile App Developer"</span>,<br>
-            status: <span class="string">"Android Developer"</span>
-        </div>
-        <div>};</div>
+<div class="terminal">
+    <pre>
+__      __  _____   _____    _        _____   _____ 
+\ \    / / |_   _| / ____|  / \      / ____| | ____|
+ \ \  / /    | |  | |      / _ \    | (___   | |__  
+  \ \/ /     | |  | |     / ___ \    \___ \  |  __| 
+   \__/     _| |_  \____|/_/   \_\   ____) | | |___ 
+           |_____|                   |_____/ |_____|
+    </pre>
 
-        <div class="code-block">
-            <span class="keyword">function</span> <span class="func">showApps</span>() {<br>
-            &nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Echa un vistazo a mis proyectos"</span>;<br>
-            }
-        </div>
-
-        <a href="https://play.google.com/store/apps/developer?id=VICASE" class="btn">Ver App en Play Store</a>
-        <p style="margin-top:20px;">> <span class="blink">_</span></p>
+    <div class="log">[SYSTEM] Initializing connection... <span class="success">OK</span></div>
+    <div class="log">[SYSTEM] Loading environment... <span class="success">OK</span></div>
+    <div class="log">[ABOUT] Developer: <span class="highlight">VICASE</span></div>
+    
+    <div class="content-block">
+        <span class="highlight">:: PROYECTOS ANDROID ::</span><br>
+        1. Duerme Bebe (Latidos del cora)<br>
+        2. Detector de Fantasmas PRO<br>
+        3. Detector OVNI<br>
+        4. Radar Caza Fantasmas
     </div>
+
+    <div class="log" style="margin-top: 20px;">C:\> <span class="blink">_</span></div>
+    
+    <a href="https://play.google.com/store/apps/developer?id=VICASE">VER_PERFIL_EN_GOOGLE_PLAY</a>
+</div>
 
 </body>
 </html>
